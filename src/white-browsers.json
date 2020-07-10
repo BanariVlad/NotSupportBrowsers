@@ -1,0 +1,26 @@
+[
+  {
+    "browser": "Chrome",
+    "minVersion": "83"
+  },
+  {
+    "browser": "Firefox",
+    "minVersion": "2"
+  },
+  {
+    "browser": "Opera",
+    "minVersion": "10"
+  },
+  {
+    "browser": "Edge",
+    "minVersion": "12"
+  },
+  {
+    "browser": "MSIE",
+    "minVersion": "10"
+  },
+  {
+    "browser": "IE",
+    "minVersion": "11"
+  }
+]

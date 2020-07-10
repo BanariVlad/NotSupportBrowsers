@@ -1,30 +1,3 @@
-var browsersList = [
-  {
-    browser: "Chrome",
-    minVersion: 4
-  },
-  {
-    browser: "Firefox",
-    minVersion: 2
-  },
-  {
-    browser: "Opera",
-    minVersion: 10
-  },
-  {
-    browser: "Edge",
-    minVersion: 12
-  },
-  {
-    browser: "MSIE",
-    minVersion: 9
-  },
-  {
-    browser: "IE",
-    minVersion: 11
-  }
-];
-
 function checkBrowser() {
   var userAgent = navigator.userAgent;
   var version;
@@ -52,16 +25,17 @@ function checkBrowser() {
 function compareVersions(currentBrowser) {
   var browser = currentBrowser.split(" ")[0];
   var version = Number(currentBrowser.split(" ")[1]);
-  var supported;
+  var notSupported;
 
   for (var i = 0; i < browsersList.length; i++) {
-    if (browsersList[i].browser === browser && browsersList[i].minVersion <= version) {
-      supported = true;
+    if (browsersList[i].browser === browser && browsersList[i].minVersion > version) {
+      notSupported = true;
     }
   }
 
-  if (!supported) {
-    document.write("Your browser doesn't support Vue!")
+  if (notSupported) {
+    document.write("Your browser doesn't support Vue!");
+    console.log("Your browser doesn't support Vue!");
   }
 }
 

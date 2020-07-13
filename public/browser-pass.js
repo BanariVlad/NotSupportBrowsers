@@ -76,8 +76,79 @@ function compareVersions(currentBrowser) {
   }
 
   if (notSupported) {
-    document.write("Your browser doesn't support Vue!");
-    console.log("Your browser doesn't support Vue!");
+    var container = document.createElement("div");
+    var h3 = document.createElement("h3");
+    var p = document.createElement("p");
+    var h4 = document.createElement("h4");
+    var hr = document.createElement("hr");
+
+    var browserChrome = document.createElement("div");
+    var chromeImage = document.createElement("img");
+    var chromeName = document.createElement("p");
+
+    var browserFirefox = document.createElement("div");
+    var firefoxImage = document.createElement("img");
+    var firefoxName = document.createElement("p");
+
+    var browserOpera = document.createElement("div");
+    var operaImage = document.createElement("img");
+    var operaName = document.createElement("p");
+
+    var browserEdge = document.createElement("div");
+    var edgeImage = document.createElement("img");
+    var edgeName = document.createElement("p");
+
+    chromeName.innerText = "Chrome";
+    chromeImage.src = "browsersLogo/Google.png";
+
+    firefoxName.innerText = "Firefox";
+    firefoxImage.src = "browsersLogo/Firefox.png";
+
+    operaName.innerText = "Opera";
+    operaImage.src = "browsersLogo/Opera.png";
+
+    edgeName.innerText = "Edge";
+    edgeImage.src = "browsersLogo/Edge.png";
+
+    browserChrome.appendChild(chromeImage);
+    browserChrome.appendChild(chromeName);
+
+    browserFirefox.appendChild(firefoxImage);
+    browserFirefox.appendChild(firefoxName);
+
+    browserOpera.appendChild(operaImage);
+    browserOpera.appendChild(operaName);
+
+    browserEdge.appendChild(edgeImage);
+    browserEdge.appendChild(edgeName);
+
+    container.style.cssText = "text-align: center; font-family: sans-serif";
+    h3.innerText = "Your browser isn't supported!";
+    p.innerText =
+      "Unfortunately we noticed that you're using an outdated browser. Please, update your browser or try another one!";
+    h4.innerText = "List of supported browsers:";
+    browserChrome.style.cssText =
+      "display: inline-block; *display: inline; zoom: 1; margin: 20px";
+    browserFirefox.style.cssText =
+      "display: inline-block; *display: inline; zoom: 1; margin: 20px";
+    browserOpera.style.cssText =
+      "display: inline-block; *display: inline; zoom: 1; margin: 20px";
+    browserEdge.style.cssText =
+      "display: inline-block; *display: inline; zoom: 1; margin: 20px";
+    chromeImage.style.cssText = "width: 70px; height: 70px";
+    firefoxImage.style.cssText = "width: 70px; height: 70px";
+    operaImage.style.cssText = "width: 70px; height: 70px";
+    edgeImage.style.cssText = "width: 70px; height: 70px";
+
+    container.appendChild(h3);
+    container.appendChild(p);
+    container.appendChild(h4);
+    container.appendChild(hr);
+    container.appendChild(browserChrome);
+    container.appendChild(browserFirefox);
+    container.appendChild(browserOpera);
+    container.appendChild(browserEdge);
+    document.body.appendChild(container);
   }
 }
 

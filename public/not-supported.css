@@ -1,0 +1,20 @@
+#not-supported {
+  font-family: sans-serif;
+  text-align: center;
+  display: none;
+}
+
+.browser {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+.browser {
+  margin: 20px;
+}
+
+.browser img {
+  width: 70px;
+  height: 70px;
+}

@@ -17,15 +17,15 @@ var browsersList = [
   },
   {
     browser: "MSIE",
-    minVersion: 9
+    minVersion: 10
   },
   {
     browser: "IE",
-    minVersion: 11
+    minVersion: 12
   },
   {
     browser: "Safari",
-    minVersion: 5
+    minVersion: 10
   }
 ];
 

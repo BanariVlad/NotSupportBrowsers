@@ -17,7 +17,7 @@ var browsersList = [
   },
   {
     browser: "MSIE",
-    minVersion: 10
+    minVersion: 11
   },
   {
     browser: "IE",
